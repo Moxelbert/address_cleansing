@@ -19,8 +19,10 @@ def get_street(address: str, keywords=streetname_identifiers):
             return re.search(word, address).group(0)
 
 def get_housenumber(address: str, digits: str):
-    '''function checks if which of the digit substrings
-    is assigned as housenumber and returns the other digits
-    as housenumbers''' 
+    '''function checks which of the digit substrings
+    is assigned as housenumber and returns the other digit
+    as housenumbers. This function does not returns substrings
+    like 'No', because from my point of view it is cleaner to
+    only extract the actual number (plus a, b, c etc.)''' 
     housenumbers = [d for d in digits if d not in address]
     return ' '.join(housenumbers)

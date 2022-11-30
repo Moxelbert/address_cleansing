@@ -15,7 +15,7 @@ class DataCleansing:
         '''this method takes an dataframe without headers
         as argument. It first extracts all substrings
         containing digits from the dataframe column by checking
-        a number of regex patterns. If there is only 1 substring 
+        a number of regex patterns. If there is only 1 substring
         with digits, I assume that this is the housenumber.
         If there are more substrings with digits, I apply a udf that
         determines which digit substring belongs to the streetname.
