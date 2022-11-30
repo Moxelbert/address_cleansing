@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 pyspark = "~=3.2.1"
-requests = "~=2.27.1"
 pipfile = "*"
 
 [dev-packages]

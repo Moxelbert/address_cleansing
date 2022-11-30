@@ -1,7 +1,7 @@
 # 1. Base image
-FROM python:3.8
+FROM python:3.9
 
-# 2. install java and download chrome
+# 2. install java and the vi editor
 RUN apt-get update && \
      apt-get install -y openjdk-11-jdk-headless
 
@@ -16,4 +16,3 @@ COPY ./ .
 
 #  6 Remove Dockerfile from Container
 RUN rm Dockerfile
-RUN rm Dockerfile.bak
